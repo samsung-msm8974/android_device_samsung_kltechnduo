@@ -25,13 +25,13 @@ $(call inherit-product, vendor/samsung/klte-common/klte-common-vendor-ril-m.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Fingerprint
-$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
+$(call inherit-product, device/samsung/msm8974-common/fingerprint/product.mk)
 
 # NFC
-$(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
+$(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
 # Radio/RIL
-$(call inherit-product, device/samsung/klte-common/radio/dual/product.mk)
+$(call inherit-product, device/samsung/msm8974-common/radio/dual/product.mk)
 
-# common klte
-$(call inherit-product, device/samsung/klte-common/klte.mk)
+# common msm8974
+$(call inherit-product, device/samsung/msm8974-common/klte.mk)
