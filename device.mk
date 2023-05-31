@@ -37,7 +37,8 @@ $(call inherit-product, device/samsung/msm8974-common/fingerprint/product.mk)
 $(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
 # Radio/RIL
-$(call inherit-product, device/samsung/msm8974-common/radio/dual/product.mk)
+PRODUCT_PACKAGES += \
+    rild_dsds.rc
 
 # common msm8974
 $(call inherit-product, device/samsung/msm8974-common/klte.mk)
