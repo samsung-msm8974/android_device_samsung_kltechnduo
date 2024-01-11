@@ -43,7 +43,7 @@ void vendor_load_properties()
         /* klteduoszn */
         property_override("ro.build.description", "klteduoszn-user 6.0.1 MMB29M G9006WZNU1CPJ2 release-keys");
         set_ro_product_prop("device", "klteduoszn");
-        set_ro_product_prop("fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
         set_ro_product_prop("model", "SM-G9006W");
         set_ro_product_prop("name", "klteduoszn");
         gsm_properties("9", "06w");
@@ -52,7 +52,7 @@ void vendor_load_properties()
         /* klteduoszm */
         property_override("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
         set_ro_product_prop("device", "klte");
-        set_ro_product_prop("fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
         set_ro_product_prop("model", "SM-G9008W");
         set_ro_product_prop("name", "klte");
         gsm_properties("17", "06w");
@@ -61,7 +61,7 @@ void vendor_load_properties()
         /* klteduosctc */
         property_override("ro.build.description", "klteduosctc-user 6.0.1 MMB29M G9009WKEU1CQB2 release-keys");
         set_ro_product_prop("device", "klte");
-        set_ro_product_prop("fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
         set_ro_product_prop("model", "SM-G9009W");
         set_ro_product_prop("name", "klte");
         property_override("gsm.current.vsid", "0");

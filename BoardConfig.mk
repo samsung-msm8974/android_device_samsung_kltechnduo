@@ -13,19 +13,43 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_PATH := device/samsung/kltechnduo
+COMMON_PATH := device/samsung/msm8974-common
+
 # inherit from common klte
 include device/samsung/msm8974-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,klte,kltechnduo,klteduoszn,klteduoszm
+# Bluetooth
+BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/vnd_klte.txt
+BOARD_HAVE_SAMSUNG_BLUETOOTH := true
+
+# Build Fingerprint
+BUILD_FINGERPRINT := samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltechnduo_defconfig
 
-# Fingerprint
-include $(COMMON_PATH)/fingerprint/board.mk
+# OTA
+TARGET_OTA_ASSERT_DEVICE := kltexx,klte,kltechnduo,klteduoszn,klteduoszm
+
+# Partition
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2411724800
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Recovery
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../$(COMMON_PATH)/recovery/recovery_keys.c
+
+# Include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/klte-include
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_kltechnduo
+
+# Fingerprint
+include $(COMMON_PATH)/fingerprint/board.mk
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
@@ -35,3 +59,4 @@ include $(COMMON_PATH)/radio/dual/board.mk
 
 # inherit from the proprietary version
 include vendor/samsung/kltechnduo/BoardConfigVendor.mk
+include vendor/samsung/klte-common/BoardConfigVendor.mk
