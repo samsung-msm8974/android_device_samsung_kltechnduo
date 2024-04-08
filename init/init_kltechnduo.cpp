@@ -73,26 +73,39 @@ void vendor_load_properties()
         property_override(prop_name.c_str(), value.c_str(), false);
     };
 
-    if (bootloader.find("G900FD") == 0) {
-        /* klteduosxx */
+    if (bootloader.find("G9006W") == 0) {
+        /* klteduoszn */
         for (const auto &source : ro_product_props_default_source_order) {
-            set_ro_product_prop(source, "build.fingerprint", "samsung/klteduosxx/klte:6.0.1/MMB29M/G900FDXXS1CQD2:user/release-keys");
-            set_ro_product_prop(source, "device", "klte");
-            set_ro_product_prop(source, "model", "SM-G900FD");
-            set_ro_product_prop(source, "name", "klteduos");
+            set_ro_product_prop(source, "build.fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
+            set_ro_product_prop(source, "device", "klteduoszn");
+            set_ro_product_prop(source, "model", "SM-G9006W");
+            set_ro_product_prop(source, "name", "klteduoszn");
         }
-        property_override("ro.build.description", "klteduosxx-user 6.0.1 MMB29M G900FDXXS1CQD2 release-keys");
-        property_override("ro.build.product", "klte");
-    } else if (bootloader.find("G900MD") == 0) {
-        /* klteduosub */
+        property_override("ro.build.description", "klteduoszn-user 6.0.1 MMB29M G9006WZNU1CPJ2 release-keys");
+        property_override("ro.build.product", "klteduoszn");
+    } else if (bootloader.find("G9008W") == 0) {
+        /* klteduoszm */
         for (const auto &source : ro_product_props_default_source_order) {
-            set_ro_product_prop(source, "build.fingerprint", "samsung/klteduosub/klte:6.0.1/MMB29M/G900MDUBS1CQD2:user/release-keys");
-            set_ro_product_prop(source, "device", "klte");
-            set_ro_product_prop(source, "model", "SM-G900MD");
-            set_ro_product_prop(source, "name", "klteduos");
+            set_ro_product_prop(source, "build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
+            set_ro_product_prop(source, "device", "klteduoszm");
+            set_ro_product_prop(source, "model", "SM-G9008W");
+            set_ro_product_prop(source, "name", "klteduoszm");
         }
-        property_override("ro.build.description", "klteduosub-user 6.0.1 MMB29M G900MDUBS1CQD2 release-keys");
-        property_override("ro.build.product", "klte");
+        property_override("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
+        property_override("ro.build.product", "klteduoszm");
+    } else if (bootloader.find("G9009W") == 0) {
+        /* klteduosctc */
+        for (const auto &source : ro_product_props_default_source_order) {
+            set_ro_product_prop(source, "build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
+            set_ro_product_prop(source, "device", "klteduosctc");
+            set_ro_product_prop(source, "model", "SM-G9009W");
+            set_ro_product_prop(source, "name", "klteduosctc");
+        }
+        property_override("ro.build.description", "klteduosctc-user 6.0.1 MMB29M G9009WKEU1CQB2 release-keys");
+        property_override("ro.build.product", "klteduosctc");
+        property_override("ro.cdma.home.operator.alpha", "中国电信");
+        property_override("ro.cdma.home.operator.numeric", "46003");   
+        
     }
 
     const std::string device = GetProperty("ro.product.device", "");
