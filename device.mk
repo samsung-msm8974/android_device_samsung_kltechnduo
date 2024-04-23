@@ -51,6 +51,10 @@ $(call inherit-product, device/samsung/msm8974-common/nfc/pn547/product.mk)
 
 # Radio/RIL
 PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    libril_shim \
+    librmnetctl \
+    libxml2 \
     rild_dsds.rc
 
 # common msm8974
